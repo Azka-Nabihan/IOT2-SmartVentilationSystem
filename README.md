@@ -49,6 +49,8 @@
 
 ## Testing and Evaluation
 - Uji Fungsional:
+  - Hasil Serial Monitor : ![picture 0](https://i.imgur.com/FBuerv2.png)  
+
   - Baca Sensor: Pastikan nilai DHT stabil, terkirim ke queue dan dikonsumsi
   - Mode Otomatis: Verifikasi jendela terbuka saat suhu/kelembapan tinggi; kipas meningkat seiring suhu
   - Mode Manual: ISR men-toggle mode; V5 OPEN/CLOSE langsung tercermin pada hardware
@@ -60,18 +62,28 @@
   - Blynk menampilkan gauge Suhu/Kelembapan secara live
   - Tile status mencerminkan jendela dan kipas
   - Switch mode (V4/V5) berfungsi sesuai harapan
-- Video Hasil Demo:
+  - Hasil Dashboard : ![picture 1](https://i.imgur.com/ZeFqWqN.png)  
+
+- Video Hasil Demo: https://www.youtube.com/shorts/bXwB0Q3jQdk
   
 
 ## Conclusion
 Smart Factory Ventilation System ini secara andal mengotomasi ventilasi dan kontrol kipas berdasarkan kondisi lingkungan, menyediakan mode otomatis dan manual. Desain memanfaatkan FreeRTOS untuk konkurensi, queue/semaphore untuk signaling antar-task yang aman, serta Blynk untuk monitoring/kontrol IoT. Langkah stabilitas memastikan perilaku yang tangguh saat fluktuasi jaringan.
 
 ## References
-- Dokumentasi ESP32 Arduino Core
-- FreeRTOS pada ESP32 (tasks, queue, semaphore)
-- Dokumen Blynk IoT (ESP32 + Virtual Pins)
-- Library Sensor DHT (DHT11)
-- Penggunaan Driver L298N dengan ESP32
+- Dokumentasi ESP32 Arduino Core : 
+- FreeRTOS pada ESP32 (tasks, queue, semaphore) : 
+  - “RTOS Fundamentals - FreeRTOSTM,” Freertos.org, 2024. https://www.freertos.org/Documentation/01-FreeRTOS-quick-start/01-Beginners-guide/01-RTOS-fundamentals
+  - “Practical Sections | Digilab UI,” Digilabdte.com, 2025. https://learn.digilabdte.com/books/internet-of-things/page/practical-sections
+  - “Queue | Digilab UI,” Digilabdte.com, 2025. https://learn.digilabdte.com/books/internet-of-things/page/queue
+  - “5.6 Synchronization Me... | Digilab UI,” Digilabdte.com, 2025. https://learn.digilabdte.com/books/internet-of-things/page/56-synchronization-mechanisms-a-comparative-guide
+- Dokumen Blynk IoT (ESP32 + Virtual Pins) : 
+  - “9.2 Blynk | Digilab UI,” Digilabdte.com, 2025. https://learn.digilabdte.com/books/internet-of-things/page/92-blynk
+  - “9.3 Blynk Tutorial | Digilab UI,” Digilabdte.com, 2025. https://learn.digilabdte.com/books/internet-of-things/page/93-blynk-tutorial
+
+- Library Sensor DHT (DHT11) : “ESP32 with DHT11/DHT22 Temperature and Humidity Sensor using Arduino IDE | Random Nerd Tutorials,” Random Nerd Tutorials, Apr. 25, 2019. https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-sensor-arduino-ide/
+- Penggunaan Driver L298N dengan ESP32 : Guidebook Technoskill 2.0 2025, “Guidebook Technoskill 2.0 2025,” Google Docs, 2025. https://docs.google.com/document/d/1lyyaZubaStaKYXbVGo3tT9aA75IE6OENZj3-3QUhlEc/edit?tab=t.0 (accessed Dec. 07, 2025).
+  
   
 
 ---
